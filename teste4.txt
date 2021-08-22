@@ -1,0 +1,35 @@
+4 - Faça um programa que receba entrada de dados  e informe ao usuário através de uma caixa de diálogo qual foi o dados passados.
+
+No 4 tentei fazer um loop mas não consegui, talvez faltou um return ou algo do tipo.
+
+import javax.swing.*;
+import java.util.Scanner;
+
+public class Desafio3Ex4 {
+    public static void main(String[] args) {
+        //4 - Faça um programa que receba entrada de dados  e informe ao
+        // usuário através de uma caixa de diálogo qual foi o dados passados.
+
+        int resposta = 0;
+        while (resposta == 0) {
+
+            String dado;
+            dado = JOptionPane.showInputDialog("Digite um dado: ");
+
+            // pergunta para validar execução do programa
+            resposta = JOptionPane.showConfirmDialog(null, "Deseja inserir outro dado? ");
+            if (resposta == JOptionPane.OK_OPTION) {
+                JOptionPane.showMessageDialog(null, "Insira outro dado.");
+            } else if (resposta == JOptionPane.NO_OPTION) {
+                JOptionPane.showMessageDialog(null, "Saindo do programa.");
+                // ... faz alguma coisa
+            } else if (resposta == JOptionPane.DEFAULT_OPTION) {
+                // nesse caso, -1 equivale a ESC ou clique no fechar da caixa de diálogo
+                JOptionPane.showMessageDialog(null, "Resposta: " + resposta);
+                // ... faz alguma coisa
+            }
+        }
+        // fecha
+        System.exit(0);
+    }
+}

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 DESAFIO 02
 
 1 - Implemente um programa que recebe um número de 1 a 7 e imprime o dia da semana correspondente.
@@ -159,3 +160,166 @@ public class Desafio2Ex6 {
     }
 }
 
+=======
+DESAFIO 02
+
+1 - Implemente um programa que recebe um número de 1 a 7 e imprime o dia da semana correspondente.
+
+import java.util.Scanner;
+
+public class ExercicioJava2 {
+    public static void main(String[] args) {
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Digite um numero: ");
+        int i = s.nextInt(); //lê um inteiro
+
+        switch (i) {
+            case 1:
+                System.out.println("Domingo");
+                break;
+            case 2:
+                System.out.println("Segunda-feira");
+                break;
+            case 3:
+                System.out.println("Terça-feira");
+                break;
+            case 4:
+                System.out.println("Quarta-feira");
+                break;
+            case 5:
+                System.out.println("Quinta-feira");
+                break;
+            case 6:
+                System.out.println("Sexta-feria");
+                break;
+            case 7:
+                System.out.println("Sábado");
+                break;
+            default:
+                System.out.println("Não é um número de 1 a 7.");
+        }
+
+
+    }
+}
+
+
+2 - Escreva um laço while que execute 20 vezes, imprimindo o valor da variável x que inicialmente está com valor 10.
+
+public class desafio2Ex2 {
+    public static void main(String[] args) {
+        //2 - Escreva um laço while que execute 20 vezes, imprimindo o valor da variável x que
+        // inicialmente está com valor 10.
+
+        int x = 10;
+        int y = 0;
+
+        while (y < 20) {
+            System.out.println("item " + x);
+            x++;
+
+            y++;
+        }
+    }
+
+}
+
+
+3 - Converta este laço do exercício anterior para um do-while.
+
+public class Desafio2Ex3 {
+    public static void main(String[] args) {
+        //3 - Converta este laço do exercício anterior para um do-while.
+        int x = 10;
+        int y = 0;
+
+        do {
+            System.out.println("item "+ x);
+
+            x++;
+            y++;
+        }while (y < 20);
+    }
+}
+
+
+
+
+4 - Desenvolva um programa que solicita ao usuário um número inteiro de no máximo 4 dígitos. Inverta esse número.
+
+import java.util.Scanner;
+
+public class Desafio2Ex4 {
+    public static void main(String[] args) {
+        //4 - Desenvolva um programa que solicita ao usuário um número inteiro
+        // de no máximo 4 dígitos. Inverta esse número.
+
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Digite um numero para ser invertido: ");
+        String i = Integer.toString(s.nextInt());
+        
+
+        if (i.length() > 4) {
+            System.out.println("Número deve ser menor que 4 caracteres.");
+        }else{
+            int t = Integer.parseInt(i);
+            int numeroInvertido = 0;
+
+            while (t > 0) {
+                numeroInvertido = numeroInvertido *10;
+                numeroInvertido = numeroInvertido + (t % 10);
+                t = t / 10;
+            }
+            System.out.println("Número invertido: "+numeroInvertido);
+        }
+    }
+}
+
+
+
+5 - Implemente um programa para calcular a área de um trapézio, onde: h = altura b = base menor B = base maior Área = (h.(b+B))/2
+
+import java.util.Scanner;
+
+public class Desafio2Ex5 {
+    public static void main(String[] args) {
+        //5 - Implemente um programa para calcular a área de um trapézio, onde: h = altura b = base menor
+        // B = base maior Área = (h.(b+B))/2
+
+        Scanner s = new Scanner(System.in);
+
+        System.out.print("Digite a altura h: ");
+        double h = s.nextDouble();
+        System.out.print("Digite a base menor b: ");
+        double b = s.nextDouble();
+        System.out.print("Digite a base maior B: ");
+        double B = s.nextDouble();
+
+        double area = (h*(b+B))/2;
+
+        System.out.println("Área do trapézio é: "+area);
+    }
+}
+
+
+6 - Faça um programa que imprima os quadrados dos números inteiros ímpares entre 15 e 35.
+
+public class Desafio2Ex6 {
+    public static void main(String[] args) {
+        //6 - Faça um programa que imprima os quadrados dos números inteiros ímpares entre 15 e 35.
+        //> for de 15 a 35, if se o número é par. Se for par ele não imprime e não calcula.
+        int i = 0;
+
+        for (i = 15; i <= 35; i++) {
+            if (i % 2 != 0) {
+                System.out.println("Quadrado de "+i+" é: "+i*i);
+            }
+        }
+    }
+}
+
+>>>>>>> Stashed changes
