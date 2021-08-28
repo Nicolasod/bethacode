@@ -2,16 +2,16 @@ package com.betha.ouvidoria.ouvidoria.model;
 
 public class Endereco {
     private Integer id;
-    private String tipologradouro;
+    private String tipoLogradouro;
     private String logradouro;
     private Integer numero;
     private String bairro;
     private String cidade;
     private Integer cep;
 
-    public Endereco(Integer id, String tipologradouro, String logradouro, Integer numero, String bairro, String cidade, Integer cep) {
+    public Endereco(Integer id, String tipoLogradouro, String logradouro, Integer numero, String bairro, String cidade, Integer cep) {
         this.id = id;
-        this.tipologradouro = tipologradouro;
+        this.tipoLogradouro = tipoLogradouro;
         this.logradouro = logradouro;
         this.numero = numero;
         this.bairro = bairro;
@@ -27,12 +27,12 @@ public class Endereco {
         this.id = id;
     }
 
-    public String getTipologradouro() {
-        return tipologradouro;
+    public String getTipoLogradouro() {
+        return tipoLogradouro;
     }
 
-    public void setTipologradouro(String tipologradouro) {
-        this.tipologradouro = tipologradouro;
+    public void setTipoLogradouro(String tipoLogradouro) {
+        this.tipoLogradouro = tipoLogradouro;
     }
 
     public String getLogradouro() {
