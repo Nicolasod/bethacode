@@ -8,7 +8,7 @@ public class Assunto {
         this.id = id;
         this.descricao = descricao;
     }
-//teste
+//test
     public Integer getId() {
         return id;
     }
